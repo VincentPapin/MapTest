@@ -8,7 +8,13 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <TextBox x:Name="tbSearch"></TextBox>
-        <gmaps:GMapControl x:Name="mapView" Loaded="MapView_OnLoaded" Margin="10,10,10,10"></gmaps:GMapControl>
+        <DockPanel>
+            <DockPanel>
+                <TextBox DockPanel.Dock="Top" x:Name="tbSearch" Width="200" Height="25" Margin="5,0,0,0" />
+                <Button DockPanel.Dock="Top" x:Name="btnSearch" Width="50" Height="25" Margin="5,0,0,0" Click="BtnSearch_OnClick">CHECHEK</Button>
+            </DockPanel>
+
+            <gmaps:GMapControl DockPanel.Dock="Top" x:Name="mapView" Loaded="MapView_OnLoaded" />
+        </DockPanel>
     </Grid>
 </Window>
